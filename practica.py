@@ -42,7 +42,7 @@ with tempfile.TemporaryDirectory(prefix='practica-nginx-') as carpeta:
         original = Path(carpeta)/archivo
         assert 'Welcome to nginx!' in original.read_text(encoding='utf-8')
         log.append(f'# Editar {archivo} con Vim y guardar el contenido personalizado.')
-        ejecutar(['vim','-Nu','NONE','-n','-es',archivo,'-c','%delete _','-c',f'0read {BASE/archivo}','-c','$delete _','-c','wq'],cwd=carpeta)
+        ejecutar(['vim','-Nu','NONE','-n','-es',archivo,'-c','%delete _','-c',f'0read {BASE/archivo}','-c','wq'],cwd=carpeta)
         assert original.read_bytes() == (BASE/archivo).read_bytes()
         ejecutar(['docker','cp',archivo,f'{nombre}:/usr/share/nginx/html/index.html'],cwd=carpeta)
 
