@@ -1,0 +1,24 @@
+{
+  "servidores": [
+    {
+      "contenedor": "nginx1",
+      "url": "http://localhost:8089",
+      "estado_http": 200,
+      "servidor": "nginx/1.31.7",
+      "sha256": "8cc31e58c7ea92c0d40ef2163bf2a52fd144317769b20c97da3eac5878e3f7b6"
+    },
+    {
+      "contenedor": "nginx2",
+      "url": "http://localhost:8090",
+      "estado_http": 200,
+      "servidor": "nginx/1.31.7",
+      "sha256": "93ea1f0d74a838a297f75f4f78f84c35602e596c59605511890b773f83ba8f4d"
+    }
+  ],
+  "imagen": [
+    "nginx@sha256:332d0beea97cff8c0d5d27976c0778a4b00345b9d74c2feaaf8efde548314948"
+  ],
+  "duracion_ejecucion_segundos": 7.03,
+  "entorno": "Ubuntu 24.04 en GitHub Actions",
+  "ejecucion": "39166011728"
+}
